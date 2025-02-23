@@ -1,0 +1,19 @@
+.chatContainer {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatLoading {
+  display: block;
+  margin: 50px auto;
+}
+
+.leaveButton {
+  margin-top: 20px;
+}

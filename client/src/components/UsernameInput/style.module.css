@@ -1,0 +1,9 @@
+.card {
+  max-width: 400;
+  margin: 50px auto;
+  text-align: 'center';
+}
+
+.button {
+  margin-top: 10px;
+}

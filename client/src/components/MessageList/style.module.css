@@ -1,0 +1,12 @@
+.messageList {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.messageList::-webkit-scrollbar {
+  display: none;
+}
+
+.messageList {
+  scrollbar-width: none;
+}
