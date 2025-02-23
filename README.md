@@ -36,8 +36,8 @@ Change Streams в MongoDB работают только в конфигурац�
 
 Перезапускаем MongoDB
 После внесения изменений перезапустите MongoDB, чтобы применить настройки.
-sudo systemctl restart mongod  # Для Linux (Ubuntu, CentOS)
-brew services restart mongodb  # Для macOS (если установлен через Homebrew)
+        sudo systemctl restart mongod  # Для Linux (Ubuntu, CentOS)
+        brew services restart mongodb  # Для macOS (если установлен через Homebrew)
 
 Инициируем набор реплик в MongoDB Shell
 Подключаемся к MongoDB:
@@ -45,16 +45,15 @@ brew services restart mongodb  # Для macOS (если установлен ч�
 mongosh
 
 rs.initiate()
-
 При успешном запуске вы увидите что-то похожее:
-{
-   "info2" : "no configuration specified. Using a default configuration for the set",
-   "me" : "127.0.0.1:27017",
-   "ok" : 1,
-   "$clusterTime" : { ... },
-   "operationTime" : Timestamp(1577545731, 1)
-}
+        {
+        "info2" : "no configuration specified. Using a default configuration for the set",
+        "me" : "127.0.0.1:27017",
+        "ok" : 1,
+        "$clusterTime" : { ... },
+        "operationTime" : Timestamp(1577545731, 1)
+        }
 Если используется MongoDB Atlas
 
 В MongoDB Atlas набор реплик включён по умолчанию, поэтому дополнительных настроек не требуется. Просто используйте строку подключения MONGO_URI, и Change Streams будут работать без дополнительных шагов.
-MONGO_URL ="mongodb+srv://sasundavtyandwin:<db_password>@cluster0.zjq6n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+        MONGO_URL ="mongodb+srv://sasundavtyandwin:<db_password>@cluster0.zjq6n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
