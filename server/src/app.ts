@@ -17,7 +17,7 @@ app.use(
 app.use('/messages', messagesRouter);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  console.error('Ошибка сервера:', err);
+  console.error('Server Error:', err);
   res.status(500).json({ error: 'Internal Server Error' });
 });
 

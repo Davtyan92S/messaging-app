@@ -60,7 +60,6 @@ Change Streams в MongoDB работают только в конфигурац�
 
                 MONGO_URI="mongodb+srv://messageapp:K0nwcKov9001gJFH@cluster0.jding.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-
 Важно: Очистка Redis при смене базы данных
 
 Если вы переключаете базу данных между MongoDB Atlas и локальной MongoDB, необходимо очистить Redis, чтобы удалить старые resumeToken и избежать ошибок при работе с Change Streams.

@@ -24,9 +24,13 @@ const flushMessages = async () => {
   const messages = await redis.lrange(MESSAGE_BUFFER_KEY, 0, -1);
   const parsedMessages: Message[] = messages.map(msg => JSON.parse(msg));
 
-  await saveMessagesBatch(parsedMessages);
-
-  await redis.del(MESSAGE_BUFFER_KEY);
+  try {
+    await saveMessagesBatch(parsedMessages);
+    await redis.del(MESSAGE_BUFFER_KEY);
+    console.log(`Saved ${parsedMessages.length} messages to MongoDB`);
+  } catch (error) {
+    console.error('Error saving messages to MongoDB:', error);
+  }
 
   if (timeout) {
     clearTimeout(timeout);
