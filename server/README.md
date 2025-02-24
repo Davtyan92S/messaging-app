@@ -58,7 +58,8 @@ Change Streams в MongoDB работают только в конфигурац�
 
 В MongoDB Atlas набор реплик включён по умолчанию, поэтому дополнительных настроек не требуется. Просто используйте строку подключения MONGO_URI, и Change Streams будут работать без дополнительных шагов.
 
-               MONGO_URL ="mongodb+srv://sasundavtyandwin:<db_password>@cluster0.zjq6n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+                MONGO_URI="mongodb+srv://messageapp:K0nwcKov9001gJFH@cluster0.jding.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 
 Важно: Очистка Redis при смене базы данных
 
