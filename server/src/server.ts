@@ -6,7 +6,7 @@ import app from './app';
 
 const startServer = async () => {
   try {
-    await connectDB(); 
+    await connectDB();
     const server = http.createServer(app);
     initWebSocketServer(server);
 
