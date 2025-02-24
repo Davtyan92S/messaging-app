@@ -22,7 +22,6 @@ build/
 .env.development
 .env.production
 .env.test
-.env.*
 
 # Database
 *.sqlite
